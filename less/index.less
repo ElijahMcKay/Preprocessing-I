@@ -62,49 +62,186 @@ html, body {
 // ============ Variables ================
 
 @background: #D4CED6; 
-@main-font: 1.5rem;
+@main-font: 1.75rem;
 @button-padding: 1rem 1rem;  
 
+// ============= Mixins =============
+
+.home-h3 {
+	font-size: @main-font;
+	font-weight: 700;  
+}
+
+.home-button {
+	font-size: @main-font; 
+	padding: @button-padding; 
+	text-decoration: none; 
+	background: #2F4F4F; 
+	border-radius: .25rem; 
+	border: 1px solid #2F4F4F; 
+	margin-top: 1.5rem; 
+	color: white; 
+}
+
+
+
+// ============== Body ==============
+body {
+	width: 100%; 
+	margin: auto; 
+	padding: 0rem 5rem 0rem 5rem; 
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+// ============== Header =============
+
 header {
+	margin-top: 1.5rem; 
 		.top-nav {  
 		display: flex; 
-		justify-content: flex-end;  
+		width: 100%; 
 		justify-content: space-between; 
+		padding-left: 60%; 
 
-		.top-nav a {
+		a {
 			text-decoration: none; 
 			color: black; 
+			font-size: @main-font - .5rem;   
 		}
 
 	}	
 
 }
 
+// ================ Main Section =============
+
 .main-section {
 	background: @background;  
+	margin-top: 2rem; 
 
-	.main-content {
+		.main-content {
+			padding: 3rem; 
 
-		h1 {
-			font-size: 3rem; 
+			h1 {
+				font-size: 3rem; 
+				padding-top: .5rem; 
+			}
+
+			h2 {
+				font-size: @main-font;  
+				border-bottom: 1px solid black; 
+				padding: 1.5rem 0rem; 
+			}
+
+			p {
+				font-size: 1.25rem; 
+				margin-top: 1.5rem; 
+			}
+
+			button {
+				.home-button(); 
+			}
+		
 		}
+}
 
-		h2 {
-			font-size: @main-font;  
-			border-bottom: 1px solid lightgray; 
+// =============== Middle Section =================
+
+.middle {
+	display: flex; 
+	margin-top: 2.5rem; 
+	width: 100%; 
+
+	.middle-left {
+		width: 50%; 
+		padding-right: 2rem; 
+
+		h3 {
+			.home-h3(); 
 		}
-
+		
 		p {
 			font-size: 1.25rem; 
+			margin-top: 1.5rem; 
+		}
+	}	
+
+	.middle-right {
+		display: flex; 
+		flex-direction: column; 
+		align-content: flex-end; 
+		width: 50%; 
+		
+		h3 {
+			.home-h3(); 
 		}
 
-		button {
-			font-size: @main-font; 
-			padding: @button-padding; 
-			text-decoration: none; 
-			background:darkgray; 
+		.skills-bar {
+			margin-top: 1.8rem; 
+		
+			h4 {
+				border: 1px solid lightgray; 
+				padding-left: 1rem; 
+				line-height: 3rem; 
+			}
 		}
-	
+	}
+}	
+
+// ================= Bottom Section ====================
+
+h5 {
+	font-size: @main-font;
+	font-weight: 700;  
+	margin-top: 2.5rem; 
+	padding-bottom: .5rem; 
+	border-bottom: 1px solid lightgray; 
+}
+
+.work-table {
+	line-height: 2.5rem; 
+
+	.title-row {
+		display: flex; 
+		justify-content: space-between;
+		width: 100%; 
+		font-weight: 700; 
+		padding-right: 15%; 
 	}
 
+	.first-job {
+		display: flex; 
+		justify-content: space-between;
+		width: 100%; 
+		background: @background; 
+		padding-right: 15%; 
+	}
+
+	.second-job {
+		display: flex; 
+		justify-content: space-between;
+		width: 100%; 
+		padding-right: 15%; 
+	}
+
+	.third-job {
+		display: flex; 
+		justify-content: space-between;
+		width: 100%; 
+		background: @background; 
+		padding-right: 15%; 
+	}
+}
+// ================= Footer =================
+
+footer {
+
+	p {
+		background: darkslategray; 
+		color: white; 
+		text-align: center; 
+		padding: 2rem 0rem 3rem 0rem; 
+		font-size: @main-font; 
+		margin-top: 2.5rem; 
+	}
 }
