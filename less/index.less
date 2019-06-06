@@ -97,17 +97,21 @@ body {
 
 header {
 	margin-top: 1.5rem; 
-		.top-nav {  
+	
+	.top-nav {  
 		display: flex; 
-		width: 100%; 
-		justify-content: space-between; 
-		padding-left: 60%; 
+		justify-content: flex-end;  
 
-		a {
-			text-decoration: none; 
-			color: black; 
-			font-size: @main-font - .5rem;   
-		}
+	@media (max-width: 500px) {
+		justify-content: space-between; 
+		width: 100%; 
+	}
+	
+	a {
+		text-decoration: none; 
+		color: black; 
+		font-size: @main-font - .5rem;   
+	}
 
 	}	
 
@@ -152,9 +156,19 @@ header {
 	margin-top: 2.5rem; 
 	width: 100%; 
 
+	@media (max-width: 500px) {
+		display: flex; 
+		flex-direction: column; 
+
+	}
+	
 	.middle-left {
 		width: 50%; 
 		padding-right: 2rem; 
+
+		@media (max-width: 500px) {
+			width: 100%; 
+		}
 
 		h3 {
 			.home-h3(); 
@@ -172,6 +186,11 @@ header {
 		align-content: flex-end; 
 		width: 50%; 
 		
+		@media (max-width: 500px) {
+			margin-top: 30px;
+			width: 100%;  
+		}
+		
 		h3 {
 			.home-h3(); 
 		}
@@ -185,8 +204,7 @@ header {
 				line-height: 3rem; 
 			}
 		}
-	}
-}	
+	}	
 
 // ================= Bottom Section ====================
 

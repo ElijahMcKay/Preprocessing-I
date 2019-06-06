@@ -159,14 +159,13 @@ header {
 }
 header .top-nav {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
-  padding-left: 60%;
+  justify-content: flex-end;
 }
 header .top-nav a {
   text-decoration: none;
   color: black;
   font-size: 1.25rem;
+  margin-left: 2;
 }
 .main-section {
   background: #D4CED6;
@@ -202,6 +201,12 @@ header .top-nav a {
   display: flex;
   margin-top: 2.5rem;
   width: 100%;
+}
+@media (max-width: 500px) {
+  .middle {
+    flex-direction: column;
+    display: flex;
+  }
 }
 .middle .middle-left {
   width: 50%;
